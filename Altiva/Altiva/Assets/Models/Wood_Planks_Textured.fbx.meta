@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: a352891b478261241b9c39847a74c4d8
+guid: e658b7ab160b1de41b23511d827af6c2
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
@@ -8,18 +8,18 @@ ModelImporter:
     2100000: Default Material1
     2300000: //RootNode
     3300000: //RootNode
-    4300000: humanBody
+    4300000: Box001
   externalObjects:
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: Channel_Default Material1_Diffuse
-    second: {fileID: 2800000, guid: 1765f5a7b31724645a5b0f859738ae86, type: 3}
+    second: {fileID: 2800000, guid: 56999332acc124a4cbbcc36a823327d6, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: horizon
-    second: {fileID: 2800000, guid: a69fea04c332bae48959c78b905ed62b, type: 3}
+    second: {fileID: 2800000, guid: 8e487233d41881f459a32acb0f9308af, type: 3}
   materials:
     importMaterials: 1
     materialName: 0
@@ -51,7 +51,7 @@ ModelImporter:
   meshes:
     lODScreenPercentages: []
     globalScale: 1
-    meshCompression: 0
+    meshCompression: 1
     addColliders: 0
     importVisibility: 1
     importBlendShapes: 1
