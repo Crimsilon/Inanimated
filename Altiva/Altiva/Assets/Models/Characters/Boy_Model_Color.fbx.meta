@@ -1,16 +1,25 @@
 fileFormatVersion: 2
-guid: 0049365ff0a4aed4c9912f446fc71a0a
+guid: 078d5769dfeb65e4fac3dd41e5ad3f12
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
     400000: //RootNode
-    2100000: No Name
+    2100000: Default Material1
     2300000: //RootNode
     3300000: //RootNode
-    4300000: Cylinder001
-    2186277476908879412: ImportLogs
-  externalObjects: {}
+    4300000: humanBody
+  externalObjects:
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Channel_Default Material1_Diffuse
+    second: {fileID: 2800000, guid: 8a6bca8fccac99f47805d6e0e81d6d67, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: horizon
+    second: {fileID: 2800000, guid: 496e5b488d41bab4291f7b1382ea9819, type: 3}
   materials:
     importMaterials: 1
     materialName: 0
