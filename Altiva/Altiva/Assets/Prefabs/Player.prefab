@@ -22,11 +22,12 @@ GameObject:
   - component: {fileID: 33629135373115504}
   - component: {fileID: 23150937017404016}
   - component: {fileID: 136837209731865840}
+  - component: {fileID: 136368639003188904}
   - component: {fileID: 54071041065604630}
   - component: {fileID: 114727385933556066}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -206,6 +207,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mouseSensitivity: 3
   mouseSmooth: 3
+--- !u!136 &136368639003188904
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1373680408350010}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!136 &136837209731865840
 CapsuleCollider:
   m_ObjectHideFlags: 1

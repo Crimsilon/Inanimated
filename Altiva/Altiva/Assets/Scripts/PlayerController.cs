@@ -31,7 +31,7 @@ public class PlayerController : MonoBehaviour {
 
 		//Is player looking at a game object that CanSpeak?
 		if (Physics.Raycast (transform.position, transform.TransformDirection (Vector3.forward), rayMaxDistance, layerMask)) {
-			Debug.Log ("Hit something.");
+//			Debug.Log ("Hit something.");
 			lookingAtSpeaker = true;
 		} else {
 			lookingAtSpeaker = false;
@@ -46,10 +46,10 @@ public class PlayerController : MonoBehaviour {
 		transform.Translate(moveHorizontal / speed, 0.0f, moveVertical / speed);
 	}
 
-	void OnTriggerEnter (Collider other){
+	void OnTriggerStay (Collider other){
 		if (other.tag == "KnightDay1" && lookingAtSpeaker == true) {
 			if (Input.GetAxis ("Fire1") > 0.0f) {
-				other.GetComponent<DialogueTrigger> ().ActivateDialogue;
+//				other.GetComponent<DialogueTrigger> ().ActivateDialogue;
 			}
 		}
 	}

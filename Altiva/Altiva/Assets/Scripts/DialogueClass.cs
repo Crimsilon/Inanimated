@@ -9,16 +9,4 @@ public class DialogueClass {
 
 	[TextArea(2,3)]
 	public string[] linesOfDialogue;
-
-
-
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 }
