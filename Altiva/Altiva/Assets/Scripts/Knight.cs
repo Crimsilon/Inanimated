@@ -8,7 +8,7 @@ public class Knight : MonoBehaviour {
     public float rayMaxDistance;
     public float radius;
     public DialogueClass npcDialogue;
-
+    public PlayerController playerScript;
 
     //Private Variables
     private int layerMask;
@@ -40,7 +40,7 @@ public class Knight : MonoBehaviour {
             lookingAtPlayer = false;
         }
 
-        if (lookingAtPlayer == true && Input.GetAxis("Fire1") > 0.0f)
+        if (lookingAtPlayer == true && (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Mouse0)))
         {
             if(inConversation == false)
             {
@@ -48,22 +48,16 @@ public class Knight : MonoBehaviour {
             }
         }
 
-        if (inConversation == true && Input.GetAxis("Fire1") > 0.0f)
+        if (inConversation == true && (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Mouse0)))
         {
             ContinueDialogue();
+
         }
 
-        if (Input.GetAxis("Fire1") > 0.0f)
-        {
-            if (clickOrSpaceInUse == false)
-            {
-                clickOrSpaceInUse = true;
-            }
-        }
-        else
-        {
-            clickOrSpaceInUse = false;
-        }
+//        if (GetComponent<DialogueController>().EndDialogue())
+//        {
+//
+//        }
     }
 
     public void ActivateDialogue()

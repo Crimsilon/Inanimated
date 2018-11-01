@@ -12,11 +12,13 @@ public class DialogueController : MonoBehaviour {
 
 	//private variables
 	private Queue<string> linesOfDialogue;
+    private bool talking;
 
 
 	// Use this for initialization
 	void Start () {
 		linesOfDialogue = new Queue<string> ();
+        talking = true;
 	}
 	
 	// Update is called once per frame
@@ -56,7 +58,7 @@ public class DialogueController : MonoBehaviour {
 		}
 	}
 
-	void EndDialogue(){
+	public void EndDialogue(){
 		textBox.SetActive (false);
 	}
 }

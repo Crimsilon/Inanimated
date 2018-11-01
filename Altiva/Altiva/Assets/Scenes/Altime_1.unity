@@ -248,11 +248,11 @@ MonoBehaviour:
     linesOfDialogue:
     - Testing 1
     - "Testing \n2"
-    - 'testing
+    - 'Geroge Lucas once had to buy a horse for his friend
 
-      3
-
-      ?'
+      because he was sick. This made abosolutely no sence thank you for reading.'
+    - 4
+  playerScript: {fileID: 0}
 --- !u!114 &438685927
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -525,6 +525,23 @@ Prefab:
         type: 2}
       propertyPath: m_Pivot.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114511190926657044, guid: fee3be2ddba60654baf18fa0d2f961ab,
+        type: 2}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: d0018b97e5378874e9a7e32864190226,
+        type: 3}
+    - target: {fileID: 114316497940180152, guid: fee3be2ddba60654baf18fa0d2f961ab,
+        type: 2}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 283562a63a60c084c93e7e449a1e101d,
+        type: 3}
+    - target: {fileID: 114511190926657044, guid: fee3be2ddba60654baf18fa0d2f961ab,
+        type: 2}
+      propertyPath: m_Text
+      value: Test Dialogue
       objectReference: {fileID: 0}
     - target: {fileID: 1876900956668534, guid: fee3be2ddba60654baf18fa0d2f961ab, type: 2}
       propertyPath: m_IsActive

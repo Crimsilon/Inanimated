@@ -7,6 +7,8 @@ public class CameraController : MonoBehaviour {
 	//public variables
 	public float mouseSensitivity;
 	public float mouseSmooth;
+    public float canMove;
+
 	//	public float maxYAngle;
 
 	//private variables

@@ -7,6 +7,6 @@ public class DialogueClass {
 
 	public string npcName;
 
-	[TextArea(2,3)]
+	[TextArea(3,10)]
 	public string[] linesOfDialogue;
 }

@@ -7,6 +7,8 @@ public class PlayerController : MonoBehaviour {
 	//Public Variables
 	public float speed;
 	public float rayMaxDistance;
+    public Knight knightScript;
+    public bool canMove;
 
 	//Private Variables
 	private int layerMask;
