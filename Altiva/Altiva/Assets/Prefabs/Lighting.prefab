@@ -109,8 +109,8 @@ Light:
   m_Enabled: 1
   serializedVersion: 8
   m_Type: 1
-  m_Color: {r: 0.17372729, g: 0.27427906, b: 0.6037736, a: 1}
-  m_Intensity: 0.75
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Intensity: 0
   m_Range: 10
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -187,3 +187,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotationValue: 1
   maxTime: 270
+  sunOut: 180
+  moonHidden: 180
+  timeToIlluminate: 30

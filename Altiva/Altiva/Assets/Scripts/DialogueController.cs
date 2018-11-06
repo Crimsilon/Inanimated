@@ -9,6 +9,7 @@ public class DialogueController : MonoBehaviour {
 	public Text npcNameText;
 	public Text npcDialogueText;
 	public GameObject textBox;
+	public bool endedDialogue;
 
 	//private variables
 	private Queue<string> linesOfDialogue;
@@ -19,6 +20,7 @@ public class DialogueController : MonoBehaviour {
 	void Start () {
 		linesOfDialogue = new Queue<string> ();
         talking = true;
+		endedDialogue = true;
 	}
 	
 	// Update is called once per frame
@@ -26,6 +28,8 @@ public class DialogueController : MonoBehaviour {
 		
 	}
 	public void StartDialogue(DialogueClass npcDialogue){
+
+		endedDialogue = false;
 
 		textBox.SetActive (true);
 
@@ -60,5 +64,6 @@ public class DialogueController : MonoBehaviour {
 
 	public void EndDialogue(){
 		textBox.SetActive (false);
+		endedDialogue = true;
 	}
 }

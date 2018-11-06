@@ -1,18 +1,20 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour {
 
 	//Public Variables
+	[HideInInspector]public bool inConversation;
+	[HideInInspector]public bool lookingAtSpeaker;
+	public float coins;
 	public float speed;
 	public float rayMaxDistance;
-    public Knight knightScript;
-    public bool canMove;
+	public CharacterDialogue characterDialogueScript;
 
 	//Private Variables
 	private int layerMask;
-	private bool lookingAtSpeaker;
 	private bool inConveration;
 
 	// Use this for initialization
@@ -22,6 +24,7 @@ public class PlayerController : MonoBehaviour {
 		//Layer 9 is "CanSpeak" Layer
 		layerMask = 1 << 9;
 		lookingAtSpeaker = false;
+		inConversation = false;
 	}
 
 	// Update is called once per frame
@@ -32,8 +35,11 @@ public class PlayerController : MonoBehaviour {
 		}
 
 		//Is player looking at a game object that CanSpeak?
-		if (Physics.Raycast (transform.position, transform.TransformDirection (Vector3.forward), rayMaxDistance, layerMask)) {
+
+		RaycastHit hit;
+		if (Physics.Raycast (transform.position, transform.TransformDirection (Vector3.forward), out hit, rayMaxDistance, layerMask)) {
 //			Debug.Log ("Hit something.");
+			inConversation = hit.collider.gameObject.GetComponent<CharacterDialogue>().inConversation;
 			lookingAtSpeaker = true;
 		} else {
 			lookingAtSpeaker = false;
@@ -42,17 +48,22 @@ public class PlayerController : MonoBehaviour {
 
 	void FixedUpdate (){
 		//MOVEMENT
-		float moveHorizontal = Input.GetAxis ("Horizontal");
-		float moveVertical = Input.GetAxis ("Vertical");
+		if (inConversation == false) {
+			float moveHorizontal = Input.GetAxis ("Horizontal");
+			float moveVertical = Input.GetAxis ("Vertical");
 
-		transform.Translate(moveHorizontal / speed, 0.0f, moveVertical / speed);
+			transform.Translate (moveHorizontal / speed, 0.0f, moveVertical / speed);
+		}
 	}
 
 	void OnTriggerStay (Collider other){
-		if (other.tag == "KnightDay1" && lookingAtSpeaker == true) {
-			if (Input.GetAxis ("Fire1") > 0.0f) {
-//				other.GetComponent<DialogueTrigger> ().ActivateDialogue;
-			}
+		if (other.tag == "ToScene1" && (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Mouse0))){
+			Debug.Log ("Loading Scene?");
+			SceneManager.LoadScene (1);
+			Debug.Log ("Scene Loaded?");
+		}
+		if (other.tag == "ToScene2" && (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Mouse0))){
+			SceneManager.LoadScene (2);
 		}
 	}
 }
